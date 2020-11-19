@@ -1,0 +1,210 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+  	<meta charset="utf-8">
+	<title>About us</title>
+	<link rel="shortcut icon" href="{{ url_for('static', filename='logo.jpg') }}" type="image/jpg">
+	<meta name="author" content="Dmitry Martinov">
+	<meta name="description" content="Our electricians have accreditation with distinguished
+	 associations within the electrical contracting and construction industries.">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!--important for responsivness, for media queries to work-->
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}"><!--imports a style sheet in a way that works in Python environment this file is in-->
+	<link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}"><!--imports a style sheet in a way that works in Python environment this file is in-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+</head>
+	{% if b == english %}
+<body>
+
+	<header>
+
+			<nav class="nav_container">
+
+				<img src="{{ url_for('static', filename='TLCROYAL_logo.jpg') }}" class = "company_logo" alt="Company logo">
+
+				<input type="checkbox" id="check1"><!--checkbox hack which allows to toggle menu on portable devices-->
+				<label for="check1" class="checkbtn1 checkbox_label1">
+					<img src="{{ url_for('static', filename='burger.svg') }}" class = "burger" alt="Company logo">
+				</label>
+
+					<ul class="nav_list">
+						<li class="navigation"><a class = "link" href="/about">About us</a></li>
+						<li class="navigation"><a class = "link" href="/index">Home</a></li>		
+						<li class="navigation"><a class = "link" href="/our_work">Our portfolio</a></li>
+						<li class="navigation"><a class = "link1" href="#">Our services</a>
+						<input type="checkbox" id="check"><!--checkbox hack which allows to toggle the drop down menu on portable devices-->
+							<label for="check" class="checkbtn checkbox_label">
+								Our services
+							</label>
+							<ul class="dropdown">
+								<li class="navigation_dropdown"><a class = "dropdownlink" href="/maintenance">Electrical Maintenance</a></li>
+								<li class="navigation_dropdown"><a class = "dropdownlink" href="/data_cabling">Data Cabling Services</a></li>
+								<li class="navigation_dropdown"><a class = "dropdownlink" href="/rewiring">Wiring & Re-wiring</a></li>
+								<li class="navigation_dropdown"><a class = "dropdownlink" href="/refurbishment">Refurbishments</a></li>
+								<li class="navigation_dropdown"><a class = "dropdownlink" href="/CCTV">CCTV Services</a></li>
+								<li class="navigation_dropdown"><a class = "dropdownlink" href="/IT">IT Services</a></li>
+							</ul>
+						</li>
+					</ul>
+					<form action="/about" method="post" class = "translator"><!--selector, which allows to translate-->
+							<!--NOTE: the dropdown below is hidden with CSS-->
+						<select id = "dropdown" name="operation"><!--"operation" is what helps to recognise this input field in the back end-->
+							<option value="russian" >English</option><!--vallue gets passed to the back end and then the logic desides what language to translate into-->
+							<option value="english" selected >Русский</option><!--selected by default so that the user doesn't need to change the language-->
+						</select>
+			
+						<input id = "translate_button" type="submit" name="translate" value="Translate to Russian"><!--the button, which sends the data to the back end-->
+					</form>
+			</nav>
+	</header>
+
+	<main class = "main">
+
+		<section class= "section1">
+            <h1 class= "page_title">About us</h1>
+        </section>
+
+		<section class= "section2">
+
+				<p>We are proud to have accreditation with established and distinguished associations within
+				the electrical contracting and construction industries, and are committed to providing
+				high quality workmanship. Our engineers regularly complete strict assessments and qualifications
+				to ensure we achieve the highest possible standards of quality, safety and customer care.
+				With years of experience, Tlcroyal Ltd has an excellent track record within the Electrical Contracting Industry,
+ 				offering high quality projects with outstanding service to its clients.</p>
+		
+		</section>
+
+	</main>
+
+	<footer class= "footer">
+	<div class= "footercontainer">
+		<div class= "a">
+			<b>Contact us</b>
+			<ul class="contact_us">
+				<li class = "footerlist"><a class = "contact_details" href="mailto:victortlcuk@gmail.com?subject= Enquiry about your services&body=Hello," target="_blank" rel="noopener noreferrer">victortlcuk@gmail.com</a></li>
+				<li class = "footerlist">If you speak English tel:<a class = "contact_details" href="tel: +447990397348"> +447990397348</a></li>
+				<li class = "footerlist">If you speak Russian tel:<a class = "contact_details" href="tel: +447853300006"> +447853300006</a></li>
+			</ul>
+		</div>
+		<div class= "b">
+			<b>Address</b>
+			<ul class= "address">
+				<li>21 Virginia Gardens,</li>
+				<li>Barkingside,</li>
+				<li>Ilford IG6 1PT.</li>
+			</ul>
+		</div>
+	</div>
+	<div class="very_bottom">
+		<br>
+		<a href= "https://www.theiet.org/"  target="_blank" rel="noopener noreferrer"><img src="{{ url_for('static', filename='iet.png') }}" class = "partners" alt="IET logo"></a>
+		<a href= "https://www.cityandguilds.com/"  target="_blank" rel="noopener noreferrer"><img src="{{ url_for('static', filename='city.png') }}" class = "partners" alt="City Guilds logo"></a>
+		<a href= "https://www.gov.uk/government/organisations/ministry-of-housing-communities-and-local-government"  target="_blank" rel="noopener noreferrer"><img src="{{ url_for('static', filename='communities.png') }}" class = "partners" alt="Communities and local government logo"></a>
+		<p class="copyright">Copyright © 2020. <a class="contact_details" href="/index">TLCROYAL.COM.</a> All rights reserved.</p>
+	</div>
+	</footer>
+</body>
+	{% elif a == russian %}
+<body>
+
+	<header>
+
+			<nav class="nav_container">
+
+				<img src="{{ url_for('static', filename='TLCROYAL_logo.jpg') }}" class = "company_logo" alt="Company logo">
+
+				<input type="checkbox" id="check1"><!--checkbox hack which allows to toggle menu on portable devices-->
+				<label for="check1" class="checkbtn1 checkbox_label1">
+					<img src="{{ url_for('static', filename='burger.svg') }}" class = "burger" alt="Company logo">
+				</label>
+
+					<ul class="nav_list">
+
+					
+						<li class="navigation"><a lang="ru" class = "link" href="/about">О нас</a></li>
+						<li class="navigation"><a lang="ru" class = "link" href="/index">Главная</a></li>		
+						
+						<li class="navigation"><a lang="ru" class = "link" href="/our_work">Наши проекты</a></li>
+						<li class="navigation"><a lang="ru" class = "link1" href="#">Наш сервис</a>
+
+						<input type="checkbox" id="check"><!--checkbox hack which allows to toggle the drop down menu on portable devices-->
+						<label lang="ru" for="check" class="checkbtn checkbox_label">
+							Наш сервис
+						</label>
+
+							<ul class="dropdown">
+								<li class="navigation_dropdown"><a lang="ru" class = "dropdownlink" href="/maintenance">Электрическое обслуживание</a></li>
+								<li class="navigation_dropdown"><a lang="ru" class = "dropdownlink" href="/data_cabling">Кабельные услуги для передачи данных</a></li>
+								<li class="navigation_dropdown"><a lang="ru" class = "dropdownlink" href="/rewiring">Электромонтаж и перемонтаж</a></li>
+								<li class="navigation_dropdown"><a lang="ru" class = "dropdownlink" href="/refurbishment">Ремонт</a></li>
+								<li class="navigation_dropdown"><a lang="ru" class = "dropdownlink" href="/CCTV">Услуги видеонаблюдения</a></li>
+								<li class="navigation_dropdown"><a lang="ru" class = "dropdownlink" href="IT">Информационно-технологические услуги</a></li>
+							</ul>
+						</li>
+					</ul>
+					<form action="/about" method="post" class = "translator"><!--selector, which allows to translate-->
+							<!--NOTE: the dropdown below is hidden with CSS-->
+						<select id = "dropdown" name="operation"><!--"operation" is what helps to recognise this input field in the back end-->
+							<option value="russian" selected>English</option><!--vallue gets passed to the back end and then the logic desides what language to translate into-->
+							<option lang="ru" value="english" >Русский</option><!--selected by default so that the user doesn't need to change the language-->
+						</select>
+					<input id = "translate_button" type="submit" name="translate" value="Translate to English"><!--the button, which sends the data to the back end-->
+					</form>
+			</nav>
+	</header>
+
+	<main class = "main">
+
+		<section class= "section1">
+            <h1 class= "page_title" lang="ru">О нас</h1>
+        </section>
+
+		<section class= "section2">
+
+				<p lang="ru">Мы гордимся тем, что имеем аккредитацию в авторитетных и известных ассоциациях в рамках
+					электрические подрядные и строительные отрасли, и стремятся обеспечить
+					высокое качество мастерства. Наши инженеры регулярно проходят строгую аттестацию и квалификацию,
+					чтобы обеспечить достижение самых высоких стандартов качества, безопасности и обслуживания клиентов.
+					Обладая многолетним опытом, Tlcroyal Ltd имеет отличную репутацию в сфере подрядных работ по электротехнике,
+					предлагая своим клиентам высококачественные проекты с выдающимся сервисом.</p>
+		
+		</section>
+
+	</main>
+
+	<footer class= "footer">
+	<div class= "footercontainer">
+		<div class= "a">
+			<b lang="ru">Связаться с нами</b>
+			<ul class="contact_us">
+				<li class = "footerlist"><a class = "contact_details" href="mailto:victortlcuk@gmail.com?subject= Enquiry about your services&body=Hello," target="_blank" rel="noopener noreferrer">victortlcuk@gmail.com</a></li>
+				<li class = "footerlist">If you speak English tel:<a class = "contact_details" href="tel: +447990397348"> +447990397348</a></li>
+				<li lang="ru" class = "footerlist">Если вы говорите по русски тел:<a class = "contact_details" href="tel: +447853300006"> +447853300006</a></li>
+			</ul>
+		</div>
+		<div class= "b">
+			<b lang="ru">Адрес</b>
+			<ul class= "address">
+				<li>21 Virginia Gardens,</li>
+				<li>Barkingside,</li>
+				<li>Ilford IG6 1PT.</li>
+			</ul>
+		</div>
+	</div>
+	<div class="very_bottom">
+		<br>
+		<a href= "https://www.theiet.org/"  target="_blank" rel="noopener noreferrer"><img src="{{ url_for('static', filename='iet.png') }}" class = "partners" alt="IET logo"></a>
+		<a href= "https://www.cityandguilds.com/"  target="_blank" rel="noopener noreferrer"><img src="{{ url_for('static', filename='city.png') }}" class = "partners" alt="City Guilds logo"></a>
+		<a href= "https://www.gov.uk/government/organisations/ministry-of-housing-communities-and-local-government"  target="_blank" rel="noopener noreferrer"><img src="{{ url_for('static', filename='communities.png') }}" class = "partners" alt="Communities and local government logo"></a>
+		<p class="copyright">Copyright © 2020. <a class="contact_details" href="/index">TLCROYAL.COM.</a> All rights reserved.</p>
+	</div>
+	</footer>
+</body>
+	{% endif %}
+</html>

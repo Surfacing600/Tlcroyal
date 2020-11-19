@@ -1,0 +1,1042 @@
+
+/*=================
+
+Table of contents
+
+1. Header
+
+2. Body
+
+3. Other pages - services, about us
+
+4. Footer
+
+5. Responsivness
+
+===================*/
+
+
+
+*{
+    font-family: 'Istok Web', sans-serif;
+}
+
+/*-----------------
+
+ 1. Header
+ 
+-------------------*/
+
+
+.logo_list, .nav_list, .dropdown{
+    list-style: none;
+}
+
+body{
+    background-color: #51b1e8;
+}
+
+header{
+    background: white;
+    position: fixed;
+    z-index: 1;
+    height: 150px;
+    width: 100%;
+    box-shadow: 0px 15px 20px -15px #111; 
+    margin:0;
+    top: 0;
+    left:0;
+}
+
+
+main{
+    margin-top: 170px;/* prevents content overlay by the nav bar since it's fixed*/
+}
+
+.company_logo{
+    width: 200px;
+    height: auto;
+    float: left;
+    margin: 10px;
+    margin-top: 5px;
+    animation-name: logo;
+    animation-fill-mode: forwards;
+    animation-duration: 5s;
+    opacity: 0;
+}
+
+@keyframes logo{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0.1;
+    }
+    20%{
+        opacity: 0.2;
+    }
+    30%{
+        opacity: 0.3;
+    }
+    40%{
+        opacity: 0.4;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    60%{
+        opacity: 0.6;
+    }
+    70%{
+        opacity: 0.7;
+    }
+    80%{
+        opacity: 0.8;
+    }
+    90%{
+        opacity: 0.9;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.translator{
+    position: absolute;
+    top: 42%;
+    right: 50px;
+}
+
+#dropdown{/* hides the language selector dropdown as it's not needed*/
+    -webkit-appearance: none;
+    display: none;
+}
+
+.navigation{
+    display: inline-block;/* instead of just "inline" to allow more clickable area for the link so that the dropdown doesn't disappear when try to access links in it*/
+    margin-top: 55px;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+.link{
+    text-transform: uppercase;
+    padding: 45px;/* gives  more clickable area for the link so that the dropdown doesn't disappear when try to access links in it*/
+    padding-bottom: 60px;
+}
+.link1{/* formatted separately because at 1250 breakpoint it set to disappear and get replaced by .checkbox_label*/
+    text-transform: uppercase;
+    padding: 45px;
+    padding-bottom: 67px;
+}
+
+.checkbox_label{/* formatted the same way as .link to look the same*/
+    text-transform: uppercase;
+    padding: 45px;
+    padding-bottom: 70px;
+}
+
+a:hover{
+    color: #65AC3C;
+}
+
+a:active{
+    color:#65AC3C;
+}
+
+.nav_list{
+    left: 10%;
+    position: relative;
+    top: -5px;
+}
+
+.dropdown{
+    position: relative;
+    display: none;
+    border-top: solid 4px #E8E251;
+    width: 244.5px;/* adding this width allows to find a 
+    ballance in width for english and russian versions of the dropdown*/
+}
+
+.dropdownlink{
+    color: white;
+    text-transform: uppercase;
+    border-bottom: solid 1px grey;
+    margin: 0px;
+    background-color: #65AC3C;
+    display: inline-block;
+    width: 224.5px;
+    height: 100%;
+    padding: 10px;
+}
+
+.dropdownlink:hover{
+    color:#E8E251;
+}
+
+.dropdownlink:active{
+    color:#E8E251;
+}
+
+.navigation_dropdown{
+    padding: 0px;
+
+}
+
+.navigation:hover .dropdown{
+    display: block;
+    position: absolute;
+    left: 800px;
+    padding: 0px;
+    opacity: 0;
+    animation-name: dropdown;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    box-shadow: 0px 15px 20px -15px #111; 
+    top: 72px;
+  }
+
+  @keyframes dropdown{  
+    0%{
+      opacity: 0;
+    }
+    10%{
+        opacity: 0.1;
+    }
+    20%{
+        opacity: 0.2;
+    }
+    30%{
+        opacity: 0.3;
+    }
+    40%{
+        opacity: 0.4;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    60% {
+      opacity: 0.6;
+    }
+    70%{
+        opacity: 0.7;
+    }
+    80%{
+        opacity: 0.8;
+    }
+    90%{
+        opacity: 0.9;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+.checkbtn{
+    width: 30px;
+    height: auto;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;/* create a pointer cursor when hoovered over */
+    display: none;
+    cursor: pointer;
+    padding-bottom: 30px;
+    white-space: nowrap;/* alligns the text inline */
+  }
+
+  #check{
+    display: none;
+   }
+
+#check:checked ~ ul{/* when checked it shows the .dropdown menu with these properties, which is parent element to this checkbox*/
+    display: block;
+    animation-name: dropdown;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+  .checkbtn1{
+    width: 60px;
+    height: auto;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;/* creates a pointer cursor when hoovered over */
+    display: none;
+  }
+
+  #check1{/* hides the checkbox input field*/
+    display: none;
+   }
+
+#check1:checked ~ ul{/* when checked it shows the .nav_list, which is parent element to this checkbox*/
+    display:block;
+    animation-name: nav_items;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes nav_items{ /* animation for mobile device menu items*/ 
+    0%{
+      opacity: 0;
+    }
+    10%{
+        opacity: 0.1;
+    }
+    20%{
+        opacity: 0.2;
+    }
+    30%{
+        opacity: 0.3;
+    }
+    40%{
+        opacity: 0.4;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    60% {
+      opacity: 0.6;
+    }
+    70%{
+        opacity: 0.7;
+    }
+    80%{
+        opacity: 0.8;
+    }
+    90%{
+        opacity: 0.9;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+/*-----------------
+
+2. Body
+ 
+-------------------*/
+
+.contact_section{
+    position: relative;/*container set to relative to be able to absolutely position list on top of the image*/
+}
+
+.main_photo{
+    height: auto;
+    width: 102%;
+    margin-top: -19px;
+    margin-left: -8px;
+}
+.contact{
+    position: absolute;/*allows to put contact details on top of the image*/
+    background-color: rgba(51, 170, 51, .7);/*allows to make only the background transparent*/
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    top: -7.7vmin;/*to make sure that the absolute element stays within the frames of the main photo*/
+    bottom: -3.6vmin;/*to make sure that the absolute element stays within the frames of the main photo*/
+    right: 50%;/*to make sure that the absolute element stays within the frames of the main photo*/
+    left:-1%;/*to make sure that the absolute element stays within the frames of the main photo*/
+    font-size: 2vmax;
+}
+
+.contact_list{/*allows to control position of the list on the green, transparent background*/
+    top: 5px;
+    position: relative;
+    padding: 5px;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+.contact_icons{
+    position: relative;
+    top: 2.5vmax;/*to make sure the icons stay next to the text*/
+    width: 6vmax;/*to make sure the icons are responsive*/
+    height: auto;/*to make sure the icons are responsive*/
+}
+
+.pitch{
+    display: flex;
+    flex-direction: column;
+}
+
+.pitch_icon{
+    width: 10vw;
+    height: auto;
+}
+
+
+
+.pitch1, .pitch2, .pitch3, .pitch4 {
+    flex: 2;
+    margin: 8vw;
+    background-color: white;
+    font-size: 3vw;
+    border: solid 7px #8f27cc;
+    padding: 8vw;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.slider{
+    overflow: hidden;
+    margin-bottom: 8px;
+    margin-left: -8px;
+    margin-right: -8px;
+    border-top: solid 1px #8f27cc;
+    border-bottom: solid 1px #8f27cc;
+}
+
+.slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0px;
+    left: 0px;
+    animation: 30s slider infinite;
+}
+
+.slider figure img{
+    width: 10%;
+    float: left;
+}
+
+@keyframes slider{
+    0%{
+        left: 0;
+    }
+    20% {
+        left: -100%;
+    }
+    30% {
+        left: -100%;
+    }
+    40% {
+        left: -200%;
+    }
+    50% {
+        left: -200%;
+    }
+    60% {
+        left: -300%;
+    }
+    70% {
+        left: -300%;
+    }
+    80% {
+        left: -400%;
+    }
+    90% {
+        left: -400%;
+    }
+    100% {
+        left: -400%;
+    }
+}
+
+/*-----------------
+
+ 3. Other pages - services, about us
+ 
+-------------------*/
+
+.section1{
+    background-color: #0973b0;
+    height: 300px;
+    margin: -8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;/*ensures that the first section in the body gets undernith the header*/
+}
+
+.navigation:hover .dropdown{
+    margin-top: 67px;
+  }
+
+.page_title{
+    font-size: 40px;
+    text-align: center;
+}
+
+.section2{
+    padding: 100px;
+}
+
+
+
+/*-----------------
+
+4. Footer
+ 
+-------------------*/
+
+.footericon{
+        width: 40px;
+        height: auto;
+}
+
+footer{
+    background-color: #0973b0;
+    padding: 10px;
+    margin: -8px; /*so that there is no gap between the footer and edges of the screen*/
+}
+
+.footercontainer{
+    display: flex;
+}
+
+.contact_us{
+    list-style: none;
+    border-left: 2px solid #E8E251;
+    padding-left:20px;
+    margin-left:0px;
+
+}
+
+.a{
+    flex: 1;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 20%;/*helps to position address and contact us containers to the center of the footer*/
+    margin-right: 20%;
+}
+
+.b{
+    flex: 1;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+.address{
+    border-left: 2px solid #E8E251;
+    list-style: none;
+    padding-left:20px;
+    margin-left:0px;
+}
+
+.very_bottom{
+    text-align: center;
+    border-top: 2px solid #65AC3C;
+}
+
+.partners{
+    height: 50px;
+    width: auto;
+}
+
+.contact_details{
+    color: white;
+}
+
+.contact_details:hover{
+    color: #E8E251;
+}
+
+.contact_details:active{
+    color: #E8E251;
+}
+
+/*-----------------
+
+5. Responsiveness
+ 
+-------------------*/
+
+@media (max-width: 1920px){
+
+    .main_photo{
+        width: 100.9%;
+    }
+
+@media (max-width: 1752px){
+
+        .main_photo{
+            width: 101.8%;
+        }
+    }
+@media (max-width: 1250px){
+
+    .company_logo{
+        margin-top: 21px;/* so that the logo doesn't jump down*/
+    }
+    
+    .link{
+        text-transform: uppercase;
+        padding: 0px;/* gives  more clickable area for the link so that the dropdown doesn't disappear when try to access links in it*/
+        padding-bottom: 0px;
+    }
+    .translator{
+            position: absolute;
+            top: 110px;
+            right: 5px;
+         }
+    
+    .checkbox_label{/* formatted the same way as .link to look the same*/
+        text-transform: uppercase;
+        padding-right: 80%;
+        padding-bottom: 90px;
+    }
+
+    .dropdown{/* determines how the dropdown looks when "Our services" button is ckicked*/
+        position: absolute;
+        display: none;
+        width:190px;
+        left: 0px;
+        margin-top: 38px;
+        border: none;
+        box-shadow: 0px 15px 20px -15px #111; 
+    }
+
+
+    .nav_list{/* hides the entire nav list so that it can be shown by clicking on the burger menu*/
+        display: none; 
+        position: absolute;
+        left: 40%;
+        top: 0;
+        margin-top: 0px;/* overwrites previous margin to avoid jumping down on the burger menu and the logo when burger menu is activated*/
+        width: 12%;/* so that it doesn't overflow the burger menu, clickable area is on the burger menu rather than above it*/
+    }
+
+    .navigation{/* gives different formatting to the <li> elements so that they fit the narrower screen size */
+        display: block;
+        position: relative;
+        margin-top: 10px;/* overwrites previous attribute to cluster nav bar items together */
+    }
+
+    .navigation_dropdown{
+        margin-left: -40px;
+    }
+
+
+    .link1{/* hides the "Our services" hyperlink so that it can be replaced by the checkbox disguised under "Our services" label*/
+        display:none;
+    }
+
+    .navigation:hover .dropdown{/* retains the hoover functionality for checkbox disguised under "Our services" 
+        label so that it behaves the same if a desktop user changes the size of webbrowser window*/
+        left: 40px;
+        color: #65AC3C;
+        margin-top: -34px;
+        width:190px;
+    }
+
+    .checkbtn{/* shows the checkbox disguised under "Our services" label*/
+        display: block;
+        position: absolute;
+        padding-bottom: 20px;
+        padding-right: 0px;
+        padding-top: 0px;
+        padding-left: 0px;
+        right: -25px;  
+        width: 90%;
+        overflow: none;
+    }
+
+    .checkbtn1{/* shows the checkbox disguised under burger icon*/
+        display: block; 
+        position: relative;
+    }
+
+    .burger{
+        display: block;
+        position: absolute;/* so that the burger icon can be moved down and clickable are is within the icon only*/
+        top: 40px;
+        margin-top: 0px;
+        padding: 0px;
+        width:60px;
+        height: auto;
+    }
+
+    .contact{
+        top: -6.7vmin;/*to make sure that the absolute element stays within the frames of the main photo*/
+        bottom: -2vmin;/*to make sure that the absolute element stays within the frames of the main photo*/
+    }
+}
+
+@media (max-width: 1080px){
+
+    .nav_list{/* hides the entire nav list so that it can be shown by clicking on the burger menu*/
+        width: 15%;/* so that it doesn't overflow the burger menu, clickable area is on the burger menu rather than above it*/
+    }
+
+    .contact{
+        bottom: -1.5vmin;/*to make sure that the absolute element stays within the frames of the main photo*/
+    }
+}
+
+@media (max-width: 867px){
+
+    .nav_list{/* hides the entire nav list so that it can be shown by clicking on the burger menu*/
+         width: 20%;/* so that it doesn't overflow the burger menu, clickable area is on the burger menu rather than above it*/
+    }
+
+}
+
+@media (max-width: 834px){
+    
+    .translator{
+        margin-right: 30px;
+     } 
+
+     .checkbtn1{/* shows the checkbox disguised under burger icon*/
+        margin-right: 70px;
+    }
+
+    .checkbtn{
+        right: -24px;  
+    }
+
+    .contact{
+        padding-top: 0px;
+        bottom: -1.9vmin;
+        left: -2.5vmin;
+    }
+}
+
+@media (max-width: 800px){
+
+    .contact{
+        top: -7.7vmin;/*to make sure that the absolute element stays within the frames of the main photo*/
+        bottom: -2.3vmin;/*to make sure that the absolute element stays within the frames of the main photo*/
+        right: 50%;/*to make sure that the absolute element stays within the frames of the main photo*/
+        left:-1%;/*to make sure that the absolute element stays within the frames of the main photo*/
+        font-size: 2vmax;
+    }
+    
+    .contact_list{/*allows to control position of the list on the green, transparent background*/
+        top: 10px;
+        margin-top: 10px;
+        font-weight: normal;
+    }
+    
+    .contact_icons{
+        position: relative;
+        top: 2vmax;/*to make sure the icons stay next to the text*/
+        width: 5.5vmax;/*to make sure the icons are responsive*/
+        height: auto;/*to make sure the icons are responsive*/
+    }
+}
+
+
+@media (max-width: 768px){
+    
+    .translator{
+        margin-right: 30px;
+     } 
+
+     .checkbtn1{/* shows the checkbox disguised under burger icon*/
+        margin-right: 70px;
+    }
+
+    .contact{
+        padding-top: 80px;
+
+    }
+
+    .dropdown{/* determines how the dropdown looks when "Our services" button is ckicked*/
+        width:190px;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .contact{
+        padding-top: 50px;
+        bottom: -2vmin;
+        left: -2.5vmin;
+    }
+
+    .contact_list{
+        padding: 0px;
+    }
+}
+
+@media (max-width: 750px){
+
+    .contact_list{/*allows to control position of the list on the green, transparent background*/
+        top: 60px;
+        margin-top: 10px;
+        font-weight: normal;
+    }
+}
+@media (max-width: 694px){
+
+    .nav_list{/* hides the entire nav list so that it can be shown by clicking on the burger menu*/
+        width: 25%;/* so that it doesn't overflow the burger menu, clickable area is on the burger menu rather than above it*/
+
+    }
+
+    .contact_list{/*allows to control position of the list on the green, transparent background*/
+        top: 60px;
+        margin-top: 10px;
+        font-weight: normal;
+    }
+
+}
+
+@media (max-width: 686px){
+
+
+    .checkbtn1{/* shows the checkbox disguised under burger icon*/
+        margin-right: 50px;
+    }
+
+    .translator{
+        top: 90px;
+        margin-right: 10px;
+     } 
+
+    .burger{
+        top: 40px;
+        margin-top: -10px;
+        width: 50px;
+    }
+
+    .nav_list{/* hides the entire nav list so that it can be shown by clicking on the burger menu*/
+        left: 40%;
+        top: 140px;
+        background: white;
+        height: 110%;
+        text-align: center;
+        padding-left: 0;
+        width: 200px;/* so that it doesn't overflow the burger menu, clickable area is on the burger menu rather than above it*/
+    }
+
+    .link{
+        font-size: 15px;
+        padding-left: 5px;
+        padding: 5px;
+        border-top: solid 1px grey;
+    }
+
+    .navigation:hover .dropdown{/* retains the hoover functionality for checkbox disguised under "Our services" 
+        label so that it behaves the same if a desktop user changes the size of webbrowser window*/
+        left: 15px;
+        color: #65AC3C;
+        margin-top: -19px;
+        width:190px;
+    }
+
+
+    .dropdown{/* determines how the dropdown looks when "Our services" button is ckicked*/
+        left: -25px;
+        color: #65AC3C;
+        margin-top: 53px;
+        width:190px;
+    }
+    
+    .dropdownlink{
+        font-size: 15px;
+    }
+
+    .checkbtn{/* shows the checkbox disguised under "Our services" label*/
+        right: -30px;
+        width: 90%;
+        padding-bottom: 25px;
+        padding-top: 5px;
+        font-size: 15px;
+        border-top: solid 1px grey;
+    }
+
+    .main_photo{
+        width: 104.7%;
+    }
+
+    .contact_list{/*allows to control position of the list on the green, transparent background*/
+        top: 10px;
+        margin-top: 0px;
+        font-weight: normal;
+    }
+
+    .contact_icons{
+        position: relative;
+        top: 0.5vmax;/*to make sure the icons stay next to the text*/
+        width: 2.5vmax;/*to make sure the icons are responsive*/
+        height: auto;/*to make sure the icons are responsive*/
+    }
+
+    .contact{
+        bottom: -2.5vmin; 
+        padding-top: 70px;
+        left: -2%;
+    }
+
+    .a{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}}
+
+@media (max-width: 620px){
+
+    .contact_list{/*allows to control position of the list on the green, transparent background*/
+        top: 20px;
+        margin-top: 5px;
+        font-weight: normal;
+    }
+
+    .main_photo{
+        width: 103.5%;
+    }
+
+    .contact_icons{
+        position: relative;
+        top: 0.5vmax;/*to make sure the icons stay next to the text*/
+        width: 2.5vmax;/*to make sure the icons are responsive*/
+        height: auto;/*to make sure the icons are responsive*/
+    }
+
+    .contact{
+        bottom: -2.5vmin; 
+        top: -9.7vmin;
+        bottom: -2.3vmin;
+        left:-2%;
+    }
+
+    .a{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 414px){
+
+    .main_photo{
+        width: 104%;
+    }
+
+     .nav_list{
+        width: 50%;
+    }
+
+    .dropdown{
+        left: -20px;
+    }
+
+    .contact{
+        padding-top: 30px;
+        bottom: -8px;
+        left: -2.5vmin;
+    }
+
+}
+
+@media (max-width: 375px){
+
+    .dropdown{/* determines how the dropdown looks when "Our services" button is ckicked*/
+        left: -25px;
+    }
+
+    .link{
+        font-size: 13px;
+    }
+
+    .checkbtn{
+        font-size: 13px;
+        left: 7%;
+    }
+
+    .dropdownlink{
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .contact{
+        padding-top: 30px;
+        bottom: -8px;
+        left: -2.5vmin;
+    }
+
+}
+
+@media (max-width: 360px){
+
+    .checkbtn{/* shows the checkbox disguised under "Our services" label*/
+        left: 10px;
+     }
+
+     .nav_list{
+        width: 50%;
+    }
+
+     .dropdown{
+        left: -28px;
+    }
+
+    .dropdownlink{
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .contact{
+        padding-top: 40px;
+        bottom: -2vmin;
+        left: -2.5vmin;
+    }
+
+}
+
+@media (max-width: 320px){
+
+
+    .checkbtn1{/* shows the checkbox disguised under burger icon*/
+        margin-right: 50px;
+    }
+
+    .company_logo{
+        width: 150px;
+    }
+
+    .burger{
+        margin-top: -10px;
+    }
+
+    .link{
+        font-size: 13px;
+    }
+
+    .dropdownlink{
+        font-size: 13px;
+        padding: 3px;
+        width: 200px;
+    }
+  
+    .dropdown{/* determines how the dropdown looks when "Our services" button is ckicked*/
+        left: -40px;
+        margin-top: 53px;
+    }
+
+    .checkbtn{/* shows the checkbox disguised under "Our services" label*/
+        right: -20%;
+        font-size: 13px;
+    }
+
+    .main_photo{
+        width: 105.2%;
+    }
+
+    .contact_list{/*allows to control position of the list on the green, transparent background*/
+        top: 30px;
+        margin-top: 0px;
+        font-weight: normal;
+    }
+
+    .contact{
+        bottom: -1.3vmin;
+        left:-3%;
+    }
+
+    .a{
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+} 
+
+

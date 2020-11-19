@@ -1,0 +1,275 @@
+
+/*=================
+
+Table of contents
+
+1. Body
+
+2. Responsivness
+
+===================*/
+
+
+/*-----------------
+
+ 1. Body
+ 
+-------------------*/
+
+
+.main{
+    text-align: center;
+}
+
+.navigation:hover .dropdown{
+    margin-top: 67px;
+  }
+
+
+.pic{
+    width: 30%;
+    border: solid 4px white;
+    margin: 15px;
+    margin-bottom: 100px;
+}
+
+
+.pic:hover{
+    opacity: 1;
+    animation: flash 1.5s;
+}
+
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.pic {
+	transform: scale(1);
+    transition: .1s ease-in-out;
+    overflow: hidden;
+}
+
+.pic:active{
+    transform: scale(1.1);
+}
+
+.project_name{
+    background-color: white;
+    border: solid 7px #8f27cc;
+    padding: 2%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+/*----------------
+
+ 2. Responsivness
+ 
+------------------*/
+
+@media (max-width: 1250px){
+
+
+    .dropdown{/* determines how the dropdown looks when "Our services" button is ckicked*/
+        margin-top: 39px;
+    }
+
+    .nav_list{
+        width: 20%;/* so that it doesn't overflow the burger menu, clickable area is on the burger menu rather than above it*/
+    }
+
+    .navigation{/* gives different formatting to the <li> elements so that they fit the narrower screen size */
+        margin-top: 15px;/* overwrites previous attribute to cluster nav bar items together */
+    }
+
+
+    .navigation:hover .dropdown{/* retains the hoover functionality for checkbox disguised under "Our services" 
+        label so that it behaves the same if a desktop user changes the size of webbrowser window*/
+        margin-top: -33px;
+    }
+
+    .checkbtn{/* shows the checkbox disguised under "Our services" label*/
+        padding-bottom: 45px;
+        right: -15px; 
+    }
+}
+
+@media (max-width: 1117px){
+
+    .nav_list{/* hides the entire nav list so that it can be shown by clicking on the burger menu*/
+        width: 15%;/* so that it doesn't overflow the burger menu, clickable area is on the burger menu rather than above it*/
+    }
+
+    .checkbtn{/* shows the checkbox disguised under "Our services" label*/
+        right: -23px; 
+    } 
+}
+
+@media (max-width: 990px){
+    
+    .main{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .pic{
+        width: 50%;
+        height: auto;
+        margin-bottom: 70px;
+    }
+
+    .project_name{
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
+@media (max-width: 910px){
+
+    .nav_list{/* hides the entire nav list so that it can be shown by clicking on the burger menu*/
+        width: 15%;/* so that it doesn't overflow the burger menu, clickable area is on the burger menu rather than above it*/
+    }
+
+    .checkbtn{/* shows the checkbox disguised under "Our services" label*/
+        right: -25px; 
+    }
+}
+
+@media (max-width: 897px){
+
+    .nav_list{/* hides the entire nav list so that it can be shown by clicking on the burger menu*/
+        width: 20%;/* so that it doesn't overflow the burger menu, clickable area is on the burger menu rather than above it*/
+    }
+
+    .checkbtn{/* shows the checkbox disguised under "Our services" label*/
+        right: -22px; 
+    }
+}
+
+@media (max-width: 694px){
+
+    .nav_list{/* hides the entire nav list so that it can be shown by clicking on the burger menu*/
+        width: 25%;/* so that it doesn't overflow the burger menu, clickable area is on the burger menu rather than above it*/
+    }
+}
+
+@media (max-width: 686px){
+
+    .nav_list{
+        height: 100%;
+        width: 200px;/* so that it doesn't overflow the burger menu, clickable area is on the burger menu rather than above it*/
+    }
+
+    .checkbtn{/* shows the checkbox disguised under "Our services" label*/
+        right: -30px;
+    }
+
+    .dropdown{
+        margin-top: 39px;
+    }
+}
+
+@media (max-width: 533px){
+    
+    .project_name{
+        padding: 0.5%;
+    }
+}
+
+@media (max-width: 414px){
+
+    .dropdownlink{
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .project_name{
+        margin-left: 15%;
+        margin-right: 15%;
+        text-align: center;
+    }
+
+    .project_text{
+        font-size: 20px;
+    }
+
+    .dropdown{
+        left: -20px;
+    }
+
+}
+
+@media (max-width: 375px){
+
+    .checkbtn{
+        left: 5%;
+    }
+
+    .dropdown{/* determines how the dropdown looks when "Our services" button is ckicked*/
+        left: -25px;
+    }
+
+}
+
+@media (max-width: 360px){
+
+    .dropdown{/* determines how the dropdown looks when "Our services" button is ckicked*/
+        left: -28px;
+    }
+
+    .nav_list{
+        width: 50%;
+    }
+
+
+
+    .project_name{
+        margin-left: 15%;
+        margin-right: 15%;
+        text-align: center;
+    }
+
+    .project_text{
+        font-size: 20px;
+    }
+
+    .pic{
+        margin-bottom: 20px;
+     }
+
+    .dropdownlink{
+        padding: 8px;
+    }
+
+    .checkbtn{/* shows the checkbox disguised under "Our services" label*/
+        left: 5%;
+    }
+
+}
+
+@media (max-width: 320px){
+  
+    .dropdown{/* determines how the dropdown looks when "Our services" button is ckicked*/
+        left: -30px;
+    }
+
+    .dropdownlink{
+        padding: 5px;
+    }
+
+    .nav_list{
+        height: 100%;
+        left: 37%;
+        width: 170px;/* so that it doesn't overflow the burger menu, clickable area is on the burger menu rather than above it*/
+    }
+
+    .checkbtn{/* shows the checkbox disguised under "Our services" label*/
+       left: 6%;
+    }
+} 
