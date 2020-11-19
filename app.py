@@ -7,8 +7,7 @@ app = Flask(__name__)# instentiates Flask app and allows python to access static
 
 
 
-@app.route('/index', methods=["GET", "POST"]) 
-
+@app.route('/', methods=["GET", "POST"])
 def index():
     #note: the HTML dropdown for language selection is hidden with CSS
     if request.method == "POST" and "translate" in request.form:#checks the method and whether the 
@@ -28,7 +27,6 @@ def index():
 
 
 @app.route('/about', methods=["GET", "POST"]) 
-
 def about():
     #note: the HTML dropdown for language selection is hidden with CSS
     if request.method == "POST" and "translate" in request.form:#checks the method and whether the 
@@ -48,7 +46,6 @@ def about():
 
 
 @app.route('/our_work', methods=["GET", "POST"]) 
-
 def our_work():
 
     #note: the HTML dropdown for language selection is hidden with CSS
@@ -69,7 +66,6 @@ def our_work():
 
 
 @app.route('/data_cabling', methods=["GET", "POST"]) 
-
 def data_cabling():
 
     #note: the HTML dropdown for language selection is hidden with CSS
@@ -90,7 +86,6 @@ def data_cabling():
 
 
 @app.route('/CCTV', methods=["GET", "POST"]) 
-
 def CCTV():
 
     #note: the HTML dropdown for language selection is hidden with CSS
@@ -111,7 +106,6 @@ def CCTV():
 
 
 @app.route('/rewiring', methods=["GET", "POST"]) 
-
 def rewiring():
 
     #note: the HTML dropdown for language selection is hidden with CSS
@@ -132,7 +126,6 @@ def rewiring():
 
 
 @app.route('/maintenance', methods=["GET", "POST"])
-
 def maintenance():
 
     #note: the HTML dropdown for language selection is hidden with CSS
@@ -153,7 +146,6 @@ def maintenance():
 
 
 @app.route('/refurbishment', methods=["GET", "POST"])
-
 def refurbishment():
 
     #note: the HTML dropdown for language selection is hidden with CSS
@@ -175,7 +167,6 @@ def refurbishment():
 
 
 @app.route('/IT', methods=["GET", "POST"])
-
 def IT():
 
     #note: the HTML dropdown for language selection is hidden with CSS
