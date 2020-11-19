@@ -1,1 +1,1 @@
-web: gunicorn app:tlcroyal_backend
+web: gunicorn app:app
