@@ -967,7 +967,12 @@ footer{
     }
 
      .dropdown{
-        left: -28px;
+        left: -30px;
+    }
+
+    .navigation:hover .dropdown{/* retains the hoover functionality for checkbox disguised under "Our services" 
+        label so that it behaves the same if a desktop user changes the size of webbrowser window*/
+        left: 10px;
     }
 
     .dropdownlink{

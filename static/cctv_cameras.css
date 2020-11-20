@@ -181,6 +181,11 @@ Table of contents
         padding: 10px;
     }
 
+    .navigation:hover .dropdown{/* retains the hoover functionality for checkbox disguised under "Our services" 
+        label so that it behaves the same if a desktop user changes the size of webbrowser window*/
+        left: 20px;
+    }
+
     .checkbtn1{/* shows the checkbox disguised under "Our services" label*/
         left: 5%;
      }
@@ -226,6 +231,11 @@ Table of contents
         left: -25px;
     }
 
+    .navigation:hover .dropdown{/* retains the hoover functionality for checkbox disguised under "Our services" 
+        label so that it behaves the same if a desktop user changes the size of webbrowser window*/
+        left: 15px;
+    }
+
     .page_title{
         font-size: 30px;
     }
@@ -239,6 +249,11 @@ Table of contents
 
     .dropdown{/* determines how the dropdown looks when "Our services" button is ckicked*/
         left: -35px;
+    }
+
+    .navigation:hover .dropdown{/* retains the hoover functionality for checkbox disguised under "Our services" 
+        label so that it behaves the same if a desktop user changes the size of webbrowser window*/
+        left: 5px;
     }
 
     .nav_list{
@@ -285,6 +300,11 @@ Table of contents
     .dropdownlink{
         font-size: 13px;
         padding: 5px;
+    }
+
+    .navigation:hover .dropdown{/* retains the hoover functionality for checkbox disguised under "Our services" 
+        label so that it behaves the same if a desktop user changes the size of webbrowser window*/
+        left: 0px;
     }
 
     .dropdown{

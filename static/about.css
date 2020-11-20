@@ -16,7 +16,7 @@ Responsivness
     }
 
     .navigation{/* gives different formatting to the <li> elements so that they fit the narrower screen size */
-        margin-top: 15px;/* overwrites previous attribute to cluster nav bar items together */
+        margin-top: 14px;/* overwrites previous attribute to cluster nav bar items together */
     }
 
     .navigation:hover .dropdown{/* retains the hoover functionality for checkbox disguised under "Our services" 
@@ -96,6 +96,11 @@ Responsivness
         left: -20px;
     }
 
+    .navigation:hover .dropdown{/* retains the hoover functionality for checkbox disguised under "Our services" 
+        label so that it behaves the same if a desktop user changes the size of webbrowser window*/
+        left: 20px;
+    }
+
     .section2{
         padding: 20px;
     }
@@ -108,12 +113,22 @@ Responsivness
         left: -25px;
     }
 
+    .navigation:hover .dropdown{/* retains the hoover functionality for checkbox disguised under "Our services" 
+        label so that it behaves the same if a desktop user changes the size of webbrowser window*/
+        left: 15px;
+    }
+
 }
 
 @media (max-width: 360px){
 
      .dropdown{
         left: -28px;
+    }
+
+    .navigation:hover .dropdown{/* retains the hoover functionality for checkbox disguised under "Our services" 
+        label so that it behaves the same if a desktop user changes the size of webbrowser window*/
+        left: 12px;
     }
 
     .section2{
@@ -126,6 +141,11 @@ Responsivness
 
     .dropdownlink{
         padding: 8px;
+    }
+
+    .navigation:hover .dropdown{/* retains the hoover functionality for checkbox disguised under "Our services" 
+        label so that it behaves the same if a desktop user changes the size of webbrowser window*/
+        left: 0px;
     }
 
     .dropdown{

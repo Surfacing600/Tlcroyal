@@ -38,7 +38,7 @@ Table of contents
     }
 
     .navigation{/* gives different formatting to the <li> elements so that they fit the narrower screen size */
-        margin-top: 15px;/* overwrites previous attribute to cluster nav bar items together */
+        margin-top: 14px;/* overwrites previous attribute to cluster nav bar items together */
     }
 
     .link1{/* hides the "Our services" hyperlink so that it can be replaced by the checkbox disguised under "Our services" label*/
@@ -137,6 +137,11 @@ Table of contents
         padding: 10px;
     }
 
+    .navigation:hover .dropdown{/* retains the hoover functionality for checkbox disguised under "Our services" 
+        label so that it behaves the same if a desktop user changes the size of webbrowser window*/
+        left: 20px;
+    }
+
     .dropdown{
         left: -20px;
     }
@@ -194,6 +199,11 @@ Table of contents
         padding: 10px;
     }
 
+    .navigation:hover .dropdown{/* retains the hoover functionality for checkbox disguised under "Our services" 
+        label so that it behaves the same if a desktop user changes the size of webbrowser window*/
+        left: 5px;
+    }
+
     .checkbtn{/* shows the checkbox disguised under "Our services" label*/
         left: 10px;
     }
@@ -207,6 +217,11 @@ Table of contents
 
     .dropdown{
         left: -40px;
+    }
+
+    .navigation:hover .dropdown{/* retains the hoover functionality for checkbox disguised under "Our services" 
+        label so that it behaves the same if a desktop user changes the size of webbrowser window*/
+        left: 0px;
     }
 
     .nav_list{/* hides the entire nav list so that it can be shown by clicking on the burger menu*/
