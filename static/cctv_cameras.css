@@ -19,7 +19,7 @@ Table of contents
 
 .cctv_img{
     display: block;
-    background-color: black;
+    background-color: red;
     border-radius: 20px;
     box-shadow: 0px 20px 20px -15px #111; 
 }
