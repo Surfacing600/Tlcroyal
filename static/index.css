@@ -572,10 +572,10 @@ footer{
         padding-bottom: 0px;
     }
     .translator{
-            position: absolute;
-            top: 110px;
-            right: 5px;
-         }
+        position: absolute;
+        top: 110px;
+        right: 5px;
+    }
     
     .checkbox_label{/* formatted the same way as .link to look the same*/
         text-transform: uppercase;
